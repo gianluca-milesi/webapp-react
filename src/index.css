@@ -5,7 +5,10 @@
   box-sizing: border-box;
 }
 
-body {}
+body {
+  background-color: #181818;
+  color: white;
+}
 
 main {
   margin: 2rem 0;
@@ -29,28 +32,4 @@ ol {
 
 img {
   max-width: 100%;
-}
-
-
-/* LAYOUT */
-.container {
-  max-width: 1024px;
-  margin: 0 auto;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.col-12 {
-  width: 100%;
-}
-
-.col-6 {
-  width: 50%;
-}
-
-.col-4 {
-  width: 33%;
 }
