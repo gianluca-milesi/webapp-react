@@ -20,8 +20,13 @@ header {
   background-color: #212121;
 }
 
-footer{
+footer {
   background-color: #212121;
+}
+
+p{
+  margin: 0;
+  padding: 0;
 }
 
 a {

@@ -1,8 +1,9 @@
-import style from "./MovieCard.jsx"
+import style from "./MovieCard.module.css"
+import { Link } from "react-router-dom"
 
 function MovieCard({ item = {} }) {
 
-    const { id, title, directior, abstract } = item
+    const { id, title, director, abstract } = item
 
 
     return (
@@ -12,9 +13,10 @@ function MovieCard({ item = {} }) {
             </figure>
             <div className={style.card_body}>
                 <h3 className="fs-5">{title}</h3>
-                <p>{directior}</p>
+                <p>{director}</p>
                 <p>{abstract}</p>
             </div>
+            <Link className={style.movie_details} to={`/movies/${id}`}>Read more</Link>
         </div>
     )
 }

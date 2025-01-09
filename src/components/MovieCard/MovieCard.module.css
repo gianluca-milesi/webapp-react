@@ -1,0 +1,14 @@
+.card{
+    margin: 0.5rem;
+}
+
+.card_body{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.movie_details{
+    padding: 0.5rem 1rem;
+    background-color: #212121;
+}
