@@ -1,0 +1,56 @@
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {}
+
+main {
+  margin: 2rem 0;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* LAYOUT */
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-4 {
+  width: 33%;
+}
