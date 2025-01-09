@@ -2,9 +2,11 @@ import { Link } from "react-router-dom"
 
 function Footer() {
     return (
-        <footer>
+        <footer className="p-4">
             <div className="container">
-                <Link to="/">Torna alla Home</Link>
+                <div className="links d-flex justify-content-center align-items-center">
+                    <Link to="/">Torna alla Home</Link>
+                </div>
             </div>
         </footer>
     )

@@ -6,7 +6,7 @@ function DefaultLayout() {
     return (
         <>
             <Header />
-            <main>
+            <main className="growflex-grow-1">
                 <Outlet />
             </main>
             <Footer />
