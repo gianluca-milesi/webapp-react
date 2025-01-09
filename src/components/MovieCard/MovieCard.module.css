@@ -1,14 +1,41 @@
-.card{
+.card {
     margin: 0.5rem;
+    position: relative;
+    transition: 0.2s;
 }
 
-.card_body{
+.card:hover{
+    scale: 1.05;
+}
+
+.card_body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 0.5rem;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.2s;
 }
 
-.movie_details{
+.card_body:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.movie_details {
     padding: 0.5rem 1rem;
     background-color: #212121;
+}
+
+p{
+    font-size: 14px;
+}
+
+span{
+    font-size: 12px;
 }
