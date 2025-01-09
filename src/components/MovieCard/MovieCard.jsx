@@ -1,15 +1,19 @@
 import style from "./MovieCard.jsx"
 
-function MovieCard() {
+function MovieCard({ item = {} }) {
+
+    const { id, title, directior, abstract } = item
+
+
     return (
         <div className={style.card}>
             <figure>
                 <img className={style.card_image} src="..." />
             </figure>
             <div className={style.card_body}>
-                <h3 className="fs-5">Titolo</h3>
-                <p>Autore</p>
-                <p>Abstact</p>
+                <h3 className="fs-5">{title}</h3>
+                <p>{directior}</p>
+                <p>{abstract}</p>
             </div>
         </div>
     )
