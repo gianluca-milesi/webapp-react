@@ -1,4 +1,5 @@
 import style from "./MovieCard.module.css"
+//Hooks
 import { Link } from "react-router-dom"
 
 function MovieCard({ item = {} }) {

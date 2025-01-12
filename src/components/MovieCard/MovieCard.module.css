@@ -1,10 +1,9 @@
 .card {
-    margin: 0.5rem;
     position: relative;
     transition: 0.2s;
 }
 
-.card:hover{
+.card:hover {
     scale: 1.05;
 }
 
@@ -27,15 +26,10 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.movie_details {
-    padding: 0.5rem 1rem;
-    background-color: #212121;
-}
-
-p{
+p {
     font-size: 14px;
 }
 
-span{
+span {
     font-size: 12px;
 }

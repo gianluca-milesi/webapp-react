@@ -1,5 +1,7 @@
 import axios from "axios"
+//Hooks
 import { useEffect, useState } from "react"
+//Components
 import MovieCard from "../components/MovieCard/MovieCard"
 
 function HomePage() {
@@ -7,7 +9,7 @@ function HomePage() {
     const [movies, setMovies] = useState([])
 
     function fetchMovies() {
-        axios.get("http://localhost:3000/api/movies")
+        axios.get(`${import.meta.env.VITE_API_URL}/movies`)
             .then(res => {
                 setMovies(res.data)
             })
