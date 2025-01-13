@@ -40,10 +40,12 @@ function FormReview({ id, fetch = () => { } }) {
         axios.post(`${import.meta.env.VITE_API_URL}/movies/${id}/reviews`, data)
             .then(res => {
                 setFormData(initialFormData)
+                setValidFormData(true)
                 fetch()
             })
             .catch(err => {
                 console.error(err)
+                setValidFormData(false)
             })
     }
 
