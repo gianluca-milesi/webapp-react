@@ -1,8 +1,14 @@
 .card {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+}
+
+.card>figure {
+    min-width: 120px;
 }
 
 .card_image {
     width: 200px;
+    height: 100%;
+    object-fit: cover;
 }
