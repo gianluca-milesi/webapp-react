@@ -59,7 +59,7 @@ function MoviePage() {
             <hr />
             <section className="create-review">
                 <div className="container">
-                    <FormReview />
+                    <FormReview id={id} fetch={fetchMovie} />
                 </div>
             </section>
         </> :

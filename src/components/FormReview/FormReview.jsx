@@ -8,7 +8,7 @@ const initialFormData = {
     vote: ""
 }
 
-function FormReview() {
+function FormReview({ id, fetch = () => { } }) {
 
     const [formData, setFormData] = useState(initialFormData)
 
@@ -34,6 +34,7 @@ function FormReview() {
         axios.post(`${import.meta.env.VITE_API_URL}/movies/${id}/reviews`, data)
             .then(res => {
                 setFormData(initialFormData)
+                fetch()
             })
             .catch(err => {
                 console.error(err)
