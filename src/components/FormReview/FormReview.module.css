@@ -55,6 +55,7 @@ textarea.input_field:focus {
     padding: 0.25rem 1rem;
     border: none;
     border-radius: 10px;
+    user-select: none;
     transition: 0.2s;
 }
 

@@ -12,6 +12,7 @@ const initialFormData = {
 function FormReview({ id, fetch = () => { } }) {
 
     const [formData, setFormData] = useState(initialFormData)
+    const [validFormData, setValidFormData] = useState(true)
 
     function handleFormData(event) {
         const { value, name: propName } = event.target
@@ -27,10 +28,14 @@ function FormReview({ id, fetch = () => { } }) {
         event.preventDefault()
 
         const data = {
-            text: formData.text.trim() || undefined,
             name: formData.name.trim(),
+            text: formData.text.trim() || undefined,
             vote: parseInt(formData.vote)
         }
+
+        //Gestione errori
+        if (!data.name || !data.vote) return setValidFormData(false)
+
 
         axios.post(`${import.meta.env.VITE_API_URL}/movies/${id}/reviews`, data)
             .then(res => {
@@ -65,6 +70,7 @@ function FormReview({ id, fetch = () => { } }) {
                     <option value="5">5</option>
                 </select>
             </div>
+            {validFormData === false ? <div className="text-danger text-center fst-italic">Invalid form data</div> : ""}
             <button className={style.button}>Send</button>
         </form>
     )

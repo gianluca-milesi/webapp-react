@@ -31,7 +31,7 @@ function MoviePage() {
 
     return (
         movie ? <>
-            <section className="movie-card">
+            <section className="hero">
                 <div className="container">
                     <SmallMovieCard item={movie} />
                 </div>
@@ -57,7 +57,7 @@ function MoviePage() {
                 </div>
             </section>
             <hr />
-            <section className="create-review">
+            <section className="form-review">
                 <div className="container">
                     <FormReview id={id} fetch={fetchMovie} />
                 </div>
