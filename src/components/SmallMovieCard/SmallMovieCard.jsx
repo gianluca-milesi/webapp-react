@@ -11,8 +11,8 @@ function SmallMovieCard({ item = {} }) {
             </figure>
             <div className={style.card_body}>
                 <h2>{title}</h2>
-                <p>{director}</p>
-                <p>{abstract}</p>
+                <p className="fw-bold">{director}</p>
+                <p className="fst-italic">{abstract}</p>
                 <p>{genre}</p>
                 <p>{release_year}</p>
             </div>

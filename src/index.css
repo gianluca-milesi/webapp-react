@@ -20,6 +20,11 @@ header {
   background-color: #212121;
 }
 
+main {
+  flex-grow: 1;
+  margin-top: 2rem;
+}
+
 footer {
   background-color: #212121;
 }
