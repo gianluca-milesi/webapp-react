@@ -23,7 +23,7 @@ function HomePage() {
                 console.error(err)
             })
             .finally(() => {
-                setIsLoading(false)
+                setIsLoading(true)
             })
     }
 
