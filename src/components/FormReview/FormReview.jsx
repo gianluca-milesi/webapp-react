@@ -55,7 +55,7 @@ function FormReview({ id, fetch = () => { } }) {
             <h4>Add review</h4>
             <div className={style.form_control}>
                 <label htmlFor="name" className="form-label m-0">Name *</label>
-                <input type="text" name="name" id="name" placeholder="insert your name" className={style.input_field} value={formData.name} onChange={handleFormData} />
+                <input type="text" name="name" id="name" placeholder="insert your name" required className={style.input_field} value={formData.name} onChange={handleFormData} />
             </div>
             <div className={style.form_control}>
                 <label htmlFor="text" className="form-label m-0">Review</label>
@@ -63,7 +63,7 @@ function FormReview({ id, fetch = () => { } }) {
             </div>
             <div className={style.form_control_select}>
                 <label className="m-0" htmlFor="vote">Vote *</label>
-                <select name="vote" id="vote" className={style.input_field_select} value={formData.vote} onChange={handleFormData}>
+                <select name="vote" id="vote" className={style.input_field_select} required value={formData.vote} onChange={handleFormData}>
                     <option value="">-</option>
                     <option value="1">1</option>
                     <option value="2">2</option>

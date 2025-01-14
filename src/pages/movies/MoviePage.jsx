@@ -1,6 +1,8 @@
 import axios from "axios"
+//Contexts
+import GlobalContext from "../../contexts/GlobalContext.js"
 //Hooks
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import { useParams } from "react-router-dom"
 //Components
 import SmallMovieCard from "../../components/SmallMovieCard/SmallMovieCard.jsx"
@@ -13,14 +15,21 @@ function MoviePage() {
 
     const [movie, setMovie] = useState(null)
     const { id } = useParams()
+    const { setIsLoading } = useContext(GlobalContext)
 
     function fetchMovie() {
+
+        setIsLoading(true)
+
         axios.get(`${import.meta.env.VITE_API_URL}/movies/${id}`)
             .then(res => {
                 setMovie(res.data)
             })
             .catch(err => {
                 console.error(err)
+            })
+            .finally(() => {
+                setIsLoading(false)
             })
     }
 
@@ -30,7 +39,7 @@ function MoviePage() {
 
 
     return (
-        movie ? <>
+        movie && <>
             <section className="hero">
                 <div className="container">
                     <SmallMovieCard item={movie} />
@@ -62,8 +71,7 @@ function MoviePage() {
                     <FormReview id={id} fetch={fetchMovie} />
                 </div>
             </section>
-        </> :
-            <div className="d-flex align-items-center justify-content-center">Loading...</div>
+        </>
     )
 }
 
