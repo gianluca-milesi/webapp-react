@@ -1,20 +1,29 @@
 import axios from "axios"
+//Contexts
+import GlobalContext from "../contexts/GlobalContext"
 //Hooks
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 //Components
 import MovieCard from "../components/MovieCard/MovieCard"
 
 function HomePage() {
 
     const [movies, setMovies] = useState([])
+    const { setIsLoading } = useContext(GlobalContext)
 
     function fetchMovies() {
+
+        setIsLoading(true)
+
         axios.get(`${import.meta.env.VITE_API_URL}/movies`)
             .then(res => {
                 setMovies(res.data)
             })
             .catch(err => {
                 console.error(err)
+            })
+            .finally(() => {
+                setIsLoading(false)
             })
     }
 
